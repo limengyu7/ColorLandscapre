@@ -1,0 +1,91 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<title>上传图片进行上色</title> 
+<link rel="stylesheet" type="text/css" href="index.css"> 
+<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">  
+<script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>  
+</head>  
+<body style="background:url(img/bg.jpg)no-repeat;background-position: center 0;background-size: 1400px;">
+	<div class="all">
+		<div>
+			<p id="h0">Color in landscape pictures</p>
+			<h1>小组分工计划</h1>
+			<table border="3">
+				<tr>
+					<td>任务名</td>
+					<td>主要负责人</td>
+					<td>开始时间</td>
+					<td>结束时间</td>
+					<td>持续时间</td>
+					<td>备注</td>
+				</tr>
+				<tr>
+					<td>卷积神经网络知识</td>
+					<td>全体</td>
+					<td>10.30</td>
+					<td>11.3</td>
+					<td>4天</td>
+					<td>整个过程一直都需要反复理解，此时就可以下载某些模块</td>
+				</tr>
+				<tr>
+					<td>讨论具体框架</td>
+					<td>全体</td>
+					<td>11.3</td>
+					<td>11.4</td>
+					<td>1天</td>
+					<td>讨论好下载，编码</td>
+				</tr>
+				<tr>
+					<td>讨论具体框架</td>
+					<td>盛蕾、李梦宇</td>
+					<td>11.3</td>
+					<td>11.6</td>
+					<td>3天</td>
+					<td>进行数据收集</td>
+				</tr>
+				<tr>
+					<td>功能模块</td>
+					<td>每个模块的负责人</td>
+					<td>11周</td>
+					<td>13周</td>
+					<td>三周</td>
+					<td>李梦宇负责前端，盛蕾、王晶、王琳林负责后端</td>
+				</tr>
+				<tr>
+					<td>整合代码</td>
+					<td>全体</td>
+					<td>14周</td>
+					<td>15周</td>
+					<td>两周</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>测试</td>
+					<td>全体</td>
+					<td>15周</td>
+					<td>16周</td>
+					<td>第十六周</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>优化参数</td>
+					<td>全体</td>
+					<td>15周</td>
+					<td>16周</td>
+					<td>第十六周</td>
+					<td></td>
+				</tr>
+			</table>
+			<h1>大概思路（随时调整）</h1>
+			<h2>一．问题：</h2>
+			<h3>目的是要从每个像素仅具有1个值（仅亮度）的灰度图像中推断出每个像素（亮度、饱和度和色调）具有3个值的全色图像，（应该是一个非监督式学习模型）我们只能处理大小为256 x 256的图像，所以我们的输入图像大小为256 x 256 x 1（亮度通道），输出的图像大小为256 x 256 x 2（另两个通道）。使用LAB色彩空间（亮度，A和B)</h3>
+            <h2>二．工具：</h2>
+            <h3>用PyTorch构建和训练搭建的模型。使用torchvision工具，scikit-learn工具，用于在RGB和LAB颜色空间之间进行转换</h3>
+            <h3>三．用卷积神经网络CNN,使用SE-Inception-ResNet-v2特征提取器，模型：迁移学习的方法，结合深度神经网络Inception-ResNet-v2设计了一个全自动的着色网络模型，在模型中加入了SENet模块</h3>
+            <h3>四．在模型中使用SE-Inception-ResNet-v2网络并从其最后一层获取灰度图像的嵌入，它主要由3部分组成，分别是特征提取模块、融合模块和重建模块</h3>
+            <h3>五．在网络中使用欧氏距离函数作为损失函数！</h3>
+            <h3>六．在项目进行过程中，全体成员之后进行补充说明。</h3>
+		</div>
+	</div>
+</body>

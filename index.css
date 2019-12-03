@@ -1,0 +1,56 @@
+*{
+	margin:0;
+	padding:0;
+	margin:auto;
+}
+.all{
+	width: 1180px;
+	height: 2500px;
+}
+ul,li,ol{
+	list-style:none;
+}
+#h0{
+	color: black;
+	font-size: 60px;
+	margin-top:20px;
+	margin-bottom:70px; 
+}
+#h01{
+	font-size: 30px;
+	float:right;
+	margin-top: 0px;
+}
+#h02{
+	font-size: 30px;
+	float:right;
+	margin-top: 0px;
+	margin-right: 100px;
+}
+#h03{
+	font-size: 30px;
+	margin-top: 300px;
+}
+#h04{
+	font-size: 30px;
+	margin-top: 200px
+}
+#h1{
+	margin-top: 50px;
+	color: gray;
+	font-size: 20px;
+}
+input{
+	margin-top: 10px;
+}
+body{
+	background-size: cover;
+}
+#file1{
+	margin-left: 100px
+}
+#coloring{
+	float: right;
+	margin-right: 550px;
+	margin-bottom: 10px;
+}
