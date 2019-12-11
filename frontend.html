@@ -19,23 +19,29 @@
 			<p id="h1">请选择图片文件：JPG/GIF</p>  
             <form name="form0" id="form0">
         	    <input type="file" name="file0" id="file0" multiple="multiple" /><br>
-        	    <img src="" id="img0" style="width: 60rem;height: 32rem;">
-            </form>  
+        	    <img src="" id="img0" style="width: 60rem;height: 32rem;">  
+        	</form>
+        	<img src="" id="img1" style='width: 60rem;height: 32rem; display:none'>
+            <input TYPE="button" name="coloring" id="coloring" value='coloring' onclick="reP()" style="width: 80px; height: 80px; border-radius:50%;border: none;">
         </div>
-        <div id="coloring">
-        	<input type="button" value="Coloring" style="width: 80px; height: 80px; border-radius:50%;border: none;">
+	<div id="new">
+        	<a href="javascript:location.reload();">Try another one</a>
         </div>
-        <div id="file1">
-        	<img src="" id="img0" style="width: 60rem;height: 32rem;">
-        </div>
+        <div id="rectangle"></div>
+        <div id="rectangle1"></div>
+        <div id="rectangle2"></div>
+        <div id="rectangle3"></div>
     </div>
 <script>   
 $("#file0").change(function(){  
 		 var objUrl = getObjectURL(this.files[0]) ;//获取文件信息  
 		 console.log("objUrl = "+objUrl);  
+		 var objUrl1 = getObjectURL(this.files[0]) ;
+		 console.log("objUrl1 = "+objUrl1);
 		  if (objUrl) {  
-		  $("#img0").attr("src", objUrl);  
-		 }   
+		  $("#img0").attr("src", objUrl);   
+		  $("#img1").attr("src", objUrl1);
+		 }    
 }) ;  
 function getObjectURL(file) {  
 		 var url = null;   
@@ -48,6 +54,9 @@ function getObjectURL(file) {
 		 }  
 		 return url ;  
 		}  
+function reP(){  
+    document.getElementById('img1').style.display = "block";  
+    }
 		</script>  
 </body>  
 </html>  
