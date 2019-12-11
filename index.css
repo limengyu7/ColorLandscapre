@@ -5,7 +5,7 @@
 }
 .all{
 	width: 1180px;
-	height: 2500px;
+	height: 2300px;
 }
 ul,li,ol{
 	list-style:none;
@@ -56,7 +56,44 @@ body{
 }
 #end{
 	font-size: 30px;
-        margin-top: 100px;
-        float: right;
-        margin-right: 550px;
+    margin-top: 100px;
+    float: right;
+    margin-right: 550px;
+}
+#img0{
+    -webkit-filter: grayscale(1); /* Webkit */
+    filter: gray; /* IE6-9 */  
+    filter: grayscale(1); /* W3C */
+}
+#new{
+	font-size: 30px;
+	margin-top: 200px;
+	margin-left: 475px;
+}
+#rectangle{
+    width:1500px;
+    height:40px;
+    background:gray;
+    margin-top: 120px;
+}
+#rectangle1{
+    width:1200px;
+    height:20px;
+    background:gray;
+    margin-top: 100px;
+    float: right;
+}
+#rectangle2{
+    width:900px;
+    height:30px;
+    background:gray;
+    margin-top: 120px;
+    float: right;
+}
+#rectangle3{
+    width:700px;
+    height:40px;
+    background:gray;
+    margin-top: 120px;
+    float: right;
 }
